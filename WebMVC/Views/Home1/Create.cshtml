@@ -1,0 +1,13 @@
+﻿@model WebMVC.Models.Test
+
+<h2>新增 Test</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">提交</button>
+    <a asp-action="Index" class="btn btn-secondary">返回</a>
+</form>

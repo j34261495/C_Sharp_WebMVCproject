@@ -1,0 +1,22 @@
+﻿@model IEnumerable<WebMVC.Models.News>
+
+<h2>新聞列表</h2>
+
+<a asp-action="Create" class="btn btn-primary">新增新聞</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>內容</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EFD</td>
+                <td>@item.wd</td>
+            </tr>
+        }
+    </tbody>
+</table>

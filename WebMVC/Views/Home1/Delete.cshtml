@@ -1,0 +1,10 @@
+﻿@model WebMVC.Models.Test
+
+<h2>確定刪除這筆資料?</h2>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-danger">刪除</button>
+    <a asp-action="Index" class="btn btn-secondary">取消</a>
+</form>
